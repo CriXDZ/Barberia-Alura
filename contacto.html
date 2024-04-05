@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <!--* Encabezado -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Barbería Alura</title>
+    <link rel="stylesheet" href="style-reset.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--* Cuerpo Principal -->
+    <header>
+      <!-- Encabezado de la página -->
+      <div class="caja">
+        <h1>
+          <img src="img/imagenes/logo.png" alt="Logo de la barbería Alura" />
+        </h1>
+        <!-- Barra de navegación -->
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="http://www.google.com">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Crear umn formulario básico "input y label"-->
+      <form action="">
+        <!-- formulario 1-->
+        <label for="nombreapellido">Nombre y Apellido:</label>
+        <input type="text" id="nombreapellido" class="input-padron" required />
+
+        <!--? propiedad "placeholder" agrega una guía al usuario ejemplo: email@dominio.com-->
+        <label for="correoelectronico">Correo electrónico:</label>
+        <input
+          type="email"
+          id="correoelectronico"
+          class="input-padron"
+          required
+          placeholder="email@dominio.com"
+        />
+
+        <label for="numerotelefono">Teléfono:</label>
+        <input
+          type="tel"
+          id="numerotelefono"
+          class="input-padron"
+          required
+          placeholder="(XX) XXXX XXXX"
+        />
+
+        <!-- barra de texto modificable-->
+        <!--? propiedad "required" hará que el campo especifico sea requerido para continuar una acción-->
+        <label for="mensaje">Mensaje</label>
+        <textarea
+          cols="70"
+          rows="10"
+          id="mensaje"
+          class="input-padron"
+          required
+        ></textarea>
+
+        <!-- etiqueta "fieldset" para agrupar items que pertenecen al mismo grupo-->
+        <fieldset>
+          <!-- Párrafo-->
+          <!--? etiqueta "legend" etiqueta de contenido que se usa dentro de las etiquetas "fieldset"-->
+          <legend class="text" id="text">
+            ¿Como le gustaría que lo contactemos?
+          </legend>
+
+          <!-- formulario 2 "radio"-->
+          <label for="radio-email"
+            ><input
+              type="radio"
+              value="email"
+              id="radio-email"
+              name="contacto"
+            />Email</label
+          >
+
+          <label for="radio-telefono"
+            ><input
+              type="radio"
+              value="email"
+              id="radio-telefono"
+              name="contacto"
+            />Teléfono</label
+          >
+
+          <label for="radio-whatsapp">
+            <input
+              type="radio"
+              value="email"
+              id="radio-whatsapp"
+              name="contacto"
+              checked
+            />
+            WhatsApp</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <!--párrafo-->
+          <legend>¿En cual horario prefiere ser atendido?</legend>
+          <!-- Etiqueta de selección-->
+          <select>
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+          </select>
+        </fieldset>
+
+        <!-- Estrategia 2 para tener el input dentro del label directamente-->
+        <!--? propiedad "checked" deja una opción seleccionada predeterminada-->
+        <label class="checkbox">
+          <input type="checkbox" checked />¿Le gustaría recibir novedades de la
+          Barbería Alura?</label
+        >
+
+        <!-- botón enviar información-->
+        <input type="submit" class="enviar" />
+      </form>
+      <!-- (table)para crear una tabla.-->
+      <table>
+        <!-- <thead>encabezado de la tabla-->
+        <thead>
+          <!-- (tr)para marcar la fila de una tabla-->
+          <tr>
+            <!--(td)para marcar una columna de una tabla-->
+            <th>Dia</th>
+            <th>horario</th>
+          </tr>
+        </thead>
+        <!-- (tbody)Cuerpo de la tabla-->
+        <tbody>
+          <tr>
+            <td>Lunes</td>
+            <td>8h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Miércoles</td>
+            <td>8h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Viernes</td>
+            <td>8h ~ 20h</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+
+    <footer>
+      <img src="img/imagenes/logo-blanco.png" alt="" />
+      <p class="copyright">&copy Copyright Barbería Alura - 2020</p>
+    </footer>
+  </body>
+</html>
