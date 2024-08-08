@@ -1,240 +1,254 @@
 /* General Styles */
 body {
-    font-family: "Montserrat", sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-  }
-  
-  /* Header Styles */
-  header {
-    background-color: #888;
-    padding: 20px 0;
-  }
-  
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Header Styles */
+header {
+  background-color: #888;
+  padding: 1rem 0;
+}
+
+.caja {
+  width: 90%;
+  max-width: 940px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.caja .logo {
+  max-width: 150px; /* Ajusta el tamaño del logo */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-left: 1rem;
+}
+
+nav a {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem; /* Usar rem para tamaño de fuente relativo */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  animation: bounceIn 0.5s ease-out;
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #c78c19;
+  box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.25rem);
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+nav a:active {
+  background-color: #a06d15;
+  transform: translateY(0);
+}
+
+/* Main Content Styles */
+main {
+  width: 90%;
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Product Titles */
+.titulo-productos {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem; /* Usar rem para tamaño de fuente relativo */
+  color: #333;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.producto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem; /* Ajustar el espacio entre tarjetas */
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.producto-card {
+  background-color: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.producto-card:hover {
+  transform: scale(1.05);
+}
+
+.producto-imagen {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #c78c19;
+  margin-bottom: 1rem;
+}
+
+.producto-titulo {
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
+  color: #333;
+}
+
+.producto-descripción {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.producto-precio {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #c78c19;
+}
+
+/* Footer Styles */
+footer {
+  background: url("/img/imagenes/bg.jpg") repeat;
+  padding: 1rem 0;
+  text-align: center;
+  color: #fff;
+}
+
+footer img {
+  max-width: 120px; /* Ajustar tamaño de imagen en footer */
+  margin-bottom: 1rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.8125rem; /* Reducir tamaño de fuente para footer */
+}
+
+/* Responsive Styles */
+
+/* Estilos para pantallas con max-width de 768px */
+@media screen and (max-width: 768px) {
   .caja {
-    width: 90%;
-    max-width: 940px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem; /* Espacio entre elementos en columna */
   }
-  
+
   nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
+
   nav li {
-    margin-left: 15px;
+    margin: 0.5rem 0;
   }
-  
-  /* Mejoras en los enlaces de navegación */
-  nav a {
-    text-transform: uppercase;
-    color: #000;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-    padding: 10px 20px; /* Incrementado para mayor tamaño */
-    transition: all 0.3s;
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    /* Añadir la animación de rebote inicial */
-    animation: bounceIn 0.5s ease-out;
+
+  .titulo-productos {
+    font-size: 2rem;
   }
-  
-  nav a:hover {
-    color: #fff;
-    background-color: #c78c19;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
-    transform: translateY(-2px); /* Elevación al pasar el ratón */
-    /* Añadir la animación de escala al hacer hover */
-    animation: scaleUp 0.3s ease-in-out;
+
+  .producto-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem; /* Ajustar espacio entre tarjetas */
   }
-  
-  nav a:active {
-    background-color: #a06d15;
+
+  .producto-card {
+    padding: 0.75rem; /* Reducir padding en pantallas pequeñas */
+  }
+
+  .producto-titulo {
+    font-size: 1.25rem;
+  }
+
+  .producto-descripción {
+    font-size: 0.875rem;
+  }
+
+  .producto-precio {
+    font-size: 1.125rem;
+  }
+}
+
+/* Estilos para pantallas con max-width de 480px */
+@media screen and (max-width: 480px) {
+  .caja {
+    padding: 1rem; /* Reducir padding en pantallas pequeñas */
+  }
+
+  nav ul {
+    padding: 0;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+
+  .titulo-productos {
+    font-size: 1.75rem;
+  }
+
+  .producto-grid {
+    gap: 0.75rem; /* Menor espacio entre tarjetas en pantallas pequeñas */
+  }
+
+  .producto-card {
+    padding: 0.5rem; /* Reducir padding en pantallas muy pequeñas */
+  }
+
+  .producto-titulo {
+    font-size: 1.1rem;
+  }
+
+  .producto-descripción {
+    font-size: 0.8rem;
+  }
+
+  .producto-precio {
+    font-size: 1rem;
+  }
+}
+
+/* --- Animations --- */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(10%);
+  }
+  100% {
     transform: translateY(0);
   }
-  
-  /* Main Content Styles */
-  main {
-    width: 90%;
-    max-width: 940px;
-    margin: 0 auto;
-    padding: 2em 0;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
   }
-  
-  /* Product Titles */
-  .titulo-productos {
-    text-align: center;
-    margin-bottom: 2em;
-    font-size: 2.5em;
-    color: #333;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    font-weight: bold;
-  }
-  
-  .producto-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    margin-bottom: 60px;
-  }
-  
-  .producto-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  
-  .producto-card:hover {
+  100% {
     transform: scale(1.05);
   }
-  
-  .producto-imagen {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #c78c19;
-    margin-bottom: 15px;
-  }
-  
-  .producto-titulo {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .producto-descripción {
-    font-size: 1em;
-    color: #666;
-    margin-bottom: 15px;
-  }
-  
-  .producto-precio {
-    font-size: 1.25em;
-    font-weight: bold;
-    color: #c78c19;
-  }
-  
-  /* Footer Styles */
-  footer {
-    background: url("/img/imagenes/bg.jpg") repeat;
-    padding: 20px 0;
-    text-align: center;
-    color: #fff;
-  }
-  
-  footer img {
-    max-width: 150px;
-    margin-bottom: 10px;
-  }
-  
-  footer p {
-    margin: 0;
-    font-size: 13px;
-  }
-  
-  /* Responsive Styles */
-  @media screen and (max-width: 768px) {
-    .producto-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    footer img {
-      max-width: 120px;
-    }
-  
-    footer p {
-      font-size: 12px;
-    }
-  }
-  
-  @media screen and (max-width: 760px) {
-    /* Ajustar el tamaño de los títulos de productos y precios */
-    .producto-titulo {
-      font-size: 1.25em;
-    }
-  
-    .producto-descripción, .producto-precio {
-      font-size: 0.9em;
-    }
-  
-    /* Ajustar el padding de las tarjetas de productos */
-    .producto-card {
-      padding: 10px;
-    }
-  
-    /* Cambiar el tamaño del logo del footer */
-    footer img {
-      max-width: 100px;
-    }
-  
-    /* Ajustar el tamaño de los textos del footer */
-    footer p {
-      font-size: 11px;
-    }
-  }
-  
-  @media screen and (max-width: 480px) {
-    /* Ajustar el tamaño de los títulos de productos y precios para pantallas muy pequeñas */
-    .producto-titulo {
-      font-size: 1em;
-    }
-  
-    .producto-descripción, .producto-precio {
-      font-size: 0.8em;
-    }
-  
-    /* Ajustar el padding de las tarjetas de productos */
-    .producto-card {
-      padding: 5px;
-    }
-  
-    /* Cambiar el tamaño del logo del footer */
-    footer img {
-      max-width: 80px;
-    }
-  
-    /* Ajustar el tamaño de los textos del footer */
-    footer p {
-      font-size: 10px;
-    }
-  }
-  
-  /* --- Animations --- */
-  
-  /* Añadir animación de rebote inicial */
-  @keyframes bounceIn {
-    0% {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    60% {
-      opacity: 1;
-      transform: translateY(10%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-  
-  /* Añadir animación de escala al hacer hover */
-  @keyframes scaleUp {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.05);
-    }
-  }
-  
+}
