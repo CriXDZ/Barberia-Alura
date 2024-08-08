@@ -1,4 +1,4 @@
-/* Importar fuente de Google Fonts */
+/* Importar fuentes de Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Ga+Maamli&family=Parisienne&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
@@ -47,23 +47,26 @@ nav a {
   transition: all 0.3s;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Añadir la animación de rebote inicial */
   animation: bounceIn 0.5s ease-out;
 }
 
-/* Animaciones en los botones al hacer hover */
+/* Animación de botones al hacer hover */
 nav a:hover {
   color: #fff;
   background-color: #c78c19;
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-2px);
-  /* Añadir la animación de escala al hacer hover */
   animation: scaleUp 0.3s ease-in-out;
 }
 
 nav a:active {
   background-color: #a06d15;
   transform: translateY(0);
+}
+
+/* Ajuste de padding entre botones */
+nav li + li {
+  margin-left: 20px;
 }
 
 /* Banner Styles */
@@ -122,12 +125,12 @@ nav a:active {
   margin-bottom: 3em;
   border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Sombra para el mapa */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 .mapa-contenido iframe {
   width: 100%;
-  height: 400px; /* Altura por defecto */
+  height: 250px; /* Reducir altura para móviles */
   border: 0;
   outline: none;
 }
@@ -176,6 +179,12 @@ nav a:active {
   margin: 20px auto;
 }
 
+.video iframe {
+  width: 100%;
+  height: 250px; /* Reducir altura para móviles */
+  border: 0;
+}
+
 /* Footer Styles */
 footer {
   background: url("img/imagenes/bg.jpg") repeat;
@@ -222,7 +231,7 @@ footer p {
   }
 
   .utensilios {
-    width: 60px; /* Ajuste del tamaño de la imagen en dispositivos móviles */
+    width: 60px;
     margin-right: 10px;
     margin-bottom: 10px;
   }
@@ -234,14 +243,14 @@ footer p {
   }
 
   .video {
-    width: 90%; /* Ajuste del video en móvil */
-    max-width: 300px; /* Máximo ancho en dispositivos móviles */
+    width: 90%;
+    max-width: 100%;
     margin: 20px auto;
   }
 
   .ubicación {
-    padding: 0 1em 25px 1em; /* Padding para mejorar la apariencia en dispositivos móviles */
-    font-size: 16px; /* Ajuste del tamaño de fuente en móviles */
+    padding: 0 1em 25px 1em;
+    font-size: 16px;
   }
 
   .mapa-contenido {
@@ -277,27 +286,24 @@ footer p {
   }
 
   .video {
-    width: 90%; /* Ajuste del video en móvil */
-    max-width: 300px; /* Máximo ancho en dispositivos móviles */
+    width: 90%;
+    max-width: 100%;
     margin: 10px auto;
   }
 
   .ubicación {
-    padding: 0 1em 25px 1em; /* Padding para mejorar la apariencia en dispositivos móviles */
-    font-size: 14px; /* Ajuste del tamaño de fuente en móviles más pequeños */
+    padding: 0 1em 25px 1em;
+    font-size: 14px;
   }
 }
 
-/* Estilos adicionales para el mapa en versión de escritorio */
 @media screen and (min-width: 1024px) {
   .mapa-contenido iframe {
-    height: 450px; /* Ajustar altura para versión de escritorio */
+    height: 450px;
   }
 }
 
 /* --- Animations --- */
-
-/* Añadir animación de rebote inicial */
 @keyframes bounceIn {
   0% {
     opacity: 0;
@@ -312,7 +318,6 @@ footer p {
   }
 }
 
-/* Añadir animación de escala al hacer hover */
 @keyframes scaleUp {
   0% {
     transform: scale(1);
