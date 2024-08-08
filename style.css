@@ -125,7 +125,6 @@ nav li + li {
   margin-bottom: 3em;
   border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .mapa-contenido iframe {
