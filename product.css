@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #888;
+    padding: 20px 0;
+  }
+  
+  .caja {
+    width: 90%;
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 15px;
+  }
+  
+  /* Mejoras en los enlaces de navegación */
+  nav a {
+    text-transform: uppercase;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px; /* Incrementado para mayor tamaño */
+    transition: all 0.3s;
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    /* Añadir la animación de rebote inicial */
+    animation: bounceIn 0.5s ease-out;
+  }
+  
+  nav a:hover {
+    color: #fff;
+    background-color: #c78c19;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    transform: translateY(-2px); /* Elevación al pasar el ratón */
+    /* Añadir la animación de escala al hacer hover */
+    animation: scaleUp 0.3s ease-in-out;
+  }
+  
+  nav a:active {
+    background-color: #a06d15;
+    transform: translateY(0);
+  }
+  
+  /* Main Content Styles */
+  main {
+    width: 90%;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 2em 0;
+  }
+  
+  /* Product Titles */
+  .titulo-productos {
+    text-align: center;
+    margin-bottom: 2em;
+    font-size: 2.5em;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+  }
+  
+  .producto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  
+  .producto-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .producto-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .producto-imagen {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #c78c19;
+    margin-bottom: 15px;
+  }
+  
+  .producto-titulo {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .producto-descripción {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .producto-precio {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #c78c19;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background: url("/img/imagenes/bg.jpg") repeat;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  footer img {
+    max-width: 150px;
+    margin-bottom: 10px;
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 13px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .producto-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    footer img {
+      max-width: 120px;
+    }
+  
+    footer p {
+      font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 760px) {
+    /* Ajustar el tamaño de los títulos de productos y precios */
+    .producto-titulo {
+      font-size: 1.25em;
+    }
+  
+    .producto-descripción, .producto-precio {
+      font-size: 0.9em;
+    }
+  
+    /* Ajustar el padding de las tarjetas de productos */
+    .producto-card {
+      padding: 10px;
+    }
+  
+    /* Cambiar el tamaño del logo del footer */
+    footer img {
+      max-width: 100px;
+    }
+  
+    /* Ajustar el tamaño de los textos del footer */
+    footer p {
+      font-size: 11px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    /* Ajustar el tamaño de los títulos de productos y precios para pantallas muy pequeñas */
+    .producto-titulo {
+      font-size: 1em;
+    }
+  
+    .producto-descripción, .producto-precio {
+      font-size: 0.8em;
+    }
+  
+    /* Ajustar el padding de las tarjetas de productos */
+    .producto-card {
+      padding: 5px;
+    }
+  
+    /* Cambiar el tamaño del logo del footer */
+    footer img {
+      max-width: 80px;
+    }
+  
+    /* Ajustar el tamaño de los textos del footer */
+    footer p {
+      font-size: 10px;
+    }
+  }
+  
+  /* --- Animations --- */
+  
+  /* Añadir animación de rebote inicial */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    60% {
+      opacity: 1;
+      transform: translateY(10%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Añadir animación de escala al hacer hover */
+  @keyframes scaleUp {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+  
